@@ -1,0 +1,221 @@
+body{
+    background-image: url("AdobeStock_301781680.jpeg");
+    background-size: cover;
+    color: bisque;
+    background-color: rgb(44, 43, 43);
+}
+.container{
+    display: flex;
+    flex-direction:row;
+    width: 100vw;
+
+}
+.cardTitle1{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: bisque;
+}
+.profileImage1{
+    margin-left: 25px;
+    height: 150px;
+    width: 150px;
+}
+.cardBorder1{
+    background-image: url("shutterstock_466156970.jpg");
+    background-size: contain;
+    margin: 10px;
+    border-radius: 15px;
+    border: 3px solid rgba(65, 64, 64, 0.8);
+    display: flex;
+    flex-direction: row;
+    height: 330px;
+    width: 285px;
+}
+.cardPrimary1{
+    background-image: url("shutterstock_391998307.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid rgb(54, 54, 54);
+    padding: 7px;
+    margin-left: 9px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column ;
+    height: 295px;
+    width: 250px;
+        
+    box-shadow:
+    2px 2px 18px rgba(0, 0, 0, 0.99),
+    -2px -2px 18px rgba(0, 0, 0, 0.99),
+    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 32px rgba(0, 0, 0, 0.5), 
+    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 32px rgba(0, 0, 0, 0.5),
+    inset 7px 7px 12px rgba(0, 0, 0, 0.9),
+    inset -7px -7px 12px rgba(0, 0, 0, 0.9), 
+    inset 5px 5px 8px rgba(0, 0, 0, 0.8),
+    inset -5px -5px 8px rgba(0, 0, 0, 0.8);
+}
+.cardFoot1{
+    background-color: rgba(224, 45, 0, 0.2);
+    border: 1px solid Red;
+    border-radius: 7px;
+    padding: 5px;
+    color: bisque;
+    text-align: center;
+}
+.cardTitle2{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: bisque;
+}
+.profileImage2{
+    margin-left: 25px;
+    height: 150px;
+    width: 150px;
+}
+.cardBorder2{
+    background-image: url("shutterstock_466156970.jpg");
+    background-size: contain;
+    margin: 10px;
+    border-radius: 15px;
+    border: 3px solid rgba(65, 64, 64, 0.8);
+    display: flex;
+    flex-direction: row;
+    height: 330px;
+    width: 285px;
+}
+.cardPrimary2{
+    background-image: url("shutterstock_391998307.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid rgb(54, 54, 54);
+    padding: 7px;
+    margin-left: 9px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column ;
+    height: 295px;
+    width: 250px;
+        
+    box-shadow:
+    2px 2px 18px rgba(0, 0, 0, 0.99),
+    -2px -2px 18px rgba(0, 0, 0, 0.99),
+    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 32px rgba(0, 0, 0, 0.5), 
+    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 32px rgba(0, 0, 0, 0.5),
+    inset 7px 7px 12px rgba(0, 0, 0, 0.9),
+    inset -7px -7px 12px rgba(0, 0, 0, 0.9), 
+    inset 5
+    px 5px 8px rgba(0, 0, 0, 0.8),
+    inset -5px -5px 8px rgba(0, 0, 0, 0.8);
+}
+.cardFoot2{
+    background-color: rgba(224, 45, 0, 0.2);
+    border: 1px solid Red;
+    border-radius: 7px;
+    padding: 5px;
+    color: bisque;
+    text-align: center;
+}
+
+.cardTitle3{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: bisque;
+}
+.profileImage3{
+    margin-left: 25px;
+    height: 150px;
+    width: 150px;
+}
+.cardBorder3{
+    background-image: url("shutterstock_466156970.jpg");
+    background-size: contain;
+    margin: 10px;
+    border-radius: 15px;
+    border: 3px solid rgba(65, 64, 64, 0.8);
+    display: flex;
+    flex-direction: row;
+    height: 330px;
+    width: 285px;
+}
+.cardPrimary3{
+    background-image: url("shutterstock_391998307.jpg");
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid rgb(54, 54, 54);
+    padding: 7px;
+    margin-left: 9px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column ;
+    height: 295px;
+    width: 250px;
+        
+    box-shadow:
+    2px 2px 18px rgba(0, 0, 0, 0.99),
+    -2px -2px 18px rgba(0, 0, 0, 0.99),
+    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 32px rgba(0, 0, 0, 0.5), 
+    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 32px rgba(0, 0, 0, 0.5),
+    inset 7px 7px 12px rgba(0, 0, 0, 0.9),
+    inset -7px -7px 12px rgba(0, 0, 0, 0.9), 
+    inset 5px 5px 8px rgba(0, 0, 0, 0.8),
+    inset -5px -5px 8px rgba(0, 0, 0, 0.8);
+}
+.cardFoot3{
+    background-color: rgba(224, 45, 0, 0.2);
+    border: 1px solid Red;
+    border-radius: 7px;
+    padding: 5px;
+    color: bisque;
+    text-align: center;
+}
+
+#box1{
+    position: absolute;
+    top: 400px;
+    left: 150px;
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+    height: 200px fit-content;
+    width: 200px fit-content;
+    border: 1px solid red;
+    background-color: rgba(36, 35, 35,0.8);
+    display:block;
+}
+
+#box2{
+    position: absolute;
+    top: 400px;
+    left: 350px;
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+    height: 200px fit-content;
+    width: 200px fit-content;
+    border: 1px solid red;
+    background-color: rgba(36, 35, 35,0.8);
+    display:block;
+}
+
+#box3{
+    position: absolute;
+    top: 400px;
+    left: 550px;
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+    height: 200px fit-content;
+    width: 200px fit-content;
+    border: 1px solid red;
+    background-color: rgba(36, 35, 35,0.8);
+    display:block;
+}
