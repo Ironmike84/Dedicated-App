@@ -1,6 +1,6 @@
 
 //Pokemon List Obejct Array 
-pokemonList = [
+let pokemonList = [
     {name: "Jolteon",
     height: 0.8,
     weight: 24.5,
@@ -19,7 +19,9 @@ pokemonList = [
 ]
 
 //loop that iterates over the Pokemon List Array//
-
+for (let i = 0; i < pokemonList.length; i++) { 
+  document.write(pokemonList[i].name)
+  }
 for (let i = 0; i < pokemonList.length; i++) {
   const elementEd = pokemonList[i];
   const elementEdd = pokemonList[i].height;  
@@ -31,13 +33,13 @@ console.log(elementEd, elementEdd)
 let user = prompt("Type in a Pokemon: Jolteon, Flareon, or Espeon...")
 function doThis(){
   
-    if (user === "Jolteon" || "jolteon"){
+    if (user.includes === "Jolteon" || "jolteon"){
  console.log(pokemonList[0]);
   }
-  else if (user === "Flareon" || "flareon"){
+  else if (user.includes === "Flareon" || "flareon"){
     console.log(pokemonList[1]);
   }
-  else if (user === "Epseon"){
+  else if (user.includes = "Epseon"){
     console.log(pokemonList[2]);
   }
   else{
