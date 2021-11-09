@@ -29,15 +29,18 @@ console.log(elementEd, elementEdd)
 
 }
 
+
+// Loops over the Length of the Pokemon list until the Greatest Weight is found.
+
+for (let i = 0; i < pokemonList.length; i++) {
+  const element = pokemonList[i];
+  let greatestWeight = 26.5
+
 //Conditional Stament For Writing Out The Biggest Pokemon Onto the DOM.
-let greatestWeight = 26.5
-if (pokemonList[0].weight === greatestWeight){
-  document.write(`${pokemonList[0].weight} lbs Wow, That's Big! ${pokemonList[0].name}`)
-}else if (pokemonList[1].weight === greatestWeight){
-  document.write(`${pokemonList[1].weight} lbs Wow, That's Big! ${pokemonList[1].name}`)
-}else if (pokemonList[2].weight === greatestWeight){
-  document.write(`${pokemonList[2].weight} lbs Wow, That's Big! ${pokemonList[2].name}`)
+
+if (pokemonList[i].weight === greatestWeight){
+  document.write(`${pokemonList[i].weight} lbs Wow, That's Big! The Biggest Pokemon Is: ${pokemonList[i].name}`)
 }else{
   console.log("No Pokemon Found...")
 }
- 
+}
