@@ -10,4 +10,4 @@ document.write method.
 
 Some code was removed that did not fit in what the task question were asking for however it was an attempt. 
 
-The stylesheet has not been updated. No updated are currently needed.
+The stylesheet had a few errors from compiling. And Were fixed manually by deleted the excess code that was inserted the GitHub. All errors were fixed and the Mege was completed for the update to the GitHub server for this project.
