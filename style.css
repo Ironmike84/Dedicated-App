@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
     background-image: url("AdobeStock_301781680.jpeg");
     background-size: cover;
@@ -182,7 +181,11 @@ body{
 #box1{
     position: absolute;
     top: 400px;
+
+    left: 200px;
+
     left: 150px;
+
     display: flex;
     flex-direction: row;
     padding: 7px;
@@ -196,7 +199,11 @@ body{
 #box2{
     position: absolute;
     top: 400px;
+
+    left: 400px;
+
     left: 350px;
+
     display: flex;
     flex-direction: row;
     padding: 7px;
@@ -210,6 +217,7 @@ body{
 #box3{
     position: absolute;
     top: 400px;
+    left: 600px;
     left: 550px;
     display: flex;
     flex-direction: row;
@@ -218,13 +226,19 @@ body{
     width: 200px fit-content;
     border: 1px solid red;
     background-color: rgba(36, 35, 35,0.8);
-    display:block;
-=======
+    display:block
+}
 .cardBody {
     display: flex;
     flex-direction: row;
     width: 100px;
     height: 200px;
     border: 1px solid red;
->>>>>>> 9c04fab35b6bbc84254ec7c24d3205ee6063b65c
+}
+.cardBody {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 200px;
+    border: 1px solid red;
 }
