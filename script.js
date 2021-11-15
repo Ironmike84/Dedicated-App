@@ -18,29 +18,44 @@ let pokemonList = [
 }
 ]
 
-//loop that iterates over the Pokemon List Array//
-// for (let i = 0; i < pokemonList.length; i++) { 
-//   document.write(pokemonList[i].name)
-//   }
-for (let i = 0; i < pokemonList.length; i++) {
-  const elementEd = pokemonList[i];
-  const elementEdd = pokemonList[i].height;  
-console.log(elementEd, elementEdd)
+let storeMe = [
+{
+  name:"",
+  height:"",
+  weight:"",
+  types:"",
 
 }
+];
+
+pokemonList.forEach(Pokemon)
+
+ function Pokemon(biggest) {
+   let heavyWeight = 26.5
+   if (biggest.weight === heavyWeight){
+     
+     console.log(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
+     document.getElementById("heavyWeight").append(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
+     storeMe.push({name: biggest.name, height: biggest.height, weight:biggest.weight, types: biggest.types})
+   }else{
+     console.log("This is not the largest weight")
+     
+   }
+ }
+
+ let pokemonRepository = (function (){
+  
+  return {
+  
+    getAll: function(i){
+      console.log(pokemonList[i]);
+     }
+
+   }
+ })()
+
+  //  function addToArray(){
+  //   storeMe.push(biggest);
+  // }
 
 
-// Loops over the Length of the Pokemon list until the Greatest Weight is found.
-
-for (let i = 0; i < pokemonList.length; i++) {
-  const element = pokemonList[i];
-  let greatestWeight = 26.5
-
-//Conditional Stament For Writing Out The Biggest Pokemon Onto the DOM.
-
-if (pokemonList[i].weight === greatestWeight){
-  document.write(`${pokemonList[i].weight} lbs Wow, That's Big! The Biggest Pokemon Is: ${pokemonList[i].name}`)
-}else{
-  console.log("No Pokemon Found...")
-}
-}
