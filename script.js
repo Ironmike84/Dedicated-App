@@ -18,7 +18,8 @@ let pokemonList = [
 }
 ]
 
-let storeMe = [
+
+let pokemonRepository = [
 {
   name:"",
   height:"",
@@ -28,6 +29,26 @@ let storeMe = [
 }
 ];
 
+
+// Storing A Pokemon in a Repository
+let storedPokemon = pokemonRepository; 
+
+
+//
+let thisRepository = function(){
+  
+  return {
+     getAll(){        
+      pokemonList.push(storedPokemon)     //<--- Stores the largest pokemon into the Pokemon Repository
+                                                  // this function. 
+      
+      console.log(`Pokemon List:${JSON.stringify(pokemonList)}`)   //<----- Prints the list of Pokemons
+     }  
+  } 
+}()
+   
+thisRepository.getAll()
+
 pokemonList.forEach(Pokemon)
 
  function Pokemon(biggest) {
@@ -36,26 +57,17 @@ pokemonList.forEach(Pokemon)
      
      console.log(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
      document.getElementById("heavyWeight").append(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
-     storeMe.push({name: biggest.name, height: biggest.height, weight:biggest.weight, types: biggest.types})
-   }else{
-     console.log("This is not the largest weight")
+     pokemonRepository.push({name: biggest.name, height: biggest.height, weight:biggest.weight, types: biggest.types});
+       
+
+    
      
    }
+   
+    
  }
 
- let pokemonRepository = (function (){
-  
-  return {
-  
-    getAll: function(i){
-      console.log(pokemonList[i]);
-     }
-
-   }
- })()
-
-  //  function addToArray(){
-  //   storeMe.push(biggest);
-  // }
 
 
+
+ 
