@@ -18,37 +18,38 @@ let pokemonList = [
 }
 ]
 
-
+//                          ?????    Why Delete this becuase I have no where to put the Pokemons without it.  ?????
+                                    // Are We I thought earlier we were creating a cariable to store our pokemon in???
 let pokemonRepository = [
 {
   name:"",
   height:"",
   weight:"",
   types:"",
-
 }
 ];
 
-
-// Storing A Pokemon in a Repository
-let storedPokemon = pokemonRepository; 
-
-
 //
 let thisRepository = function(){
-  
-  return {
-     getAll(){        
-      pokemonList.push(storedPokemon)     //<--- Stores the largest pokemon into the Pokemon Repository
-                                                  // this function. 
-      
-      console.log(`Pokemon List:${JSON.stringify(pokemonList)}`)   //<----- Prints the list of Pokemons
-     }  
-  } 
-}()
-   
-thisRepository.getAll()
+const pokemonListLists = []     //<--- Is this where we want to store the pokemon...????
+  return  {
+    
+ getAll(){
+  console.log(`Pokemon List:${JSON.stringify(pokemonList)}`)   //<----- Prints the list of Pokemons (If I don't do this Nothing happens)      
+ }
+            //?? this is the only thing that I can type here nothing else works but it doesnt' do anything  unless I
+                   //  console.log(pokemonList) But that doesn't seem to be what you want. What Should go here?
+ 
 
+}()
+
+}
+
+   // This has an error on calling the getAll function??? getAll by itself doesn't work either it means nothing Apparently. Unless you use it as a name.
+thisRepository.getAll();
+
+// If i get Rid of this my Forloop stops printing out to the console...???? So you cant pick out a pokemon to store anymore..???
+/// How are we picking out a pokemon to store without this.????
 pokemonList.forEach(Pokemon)
 
  function Pokemon(biggest) {
