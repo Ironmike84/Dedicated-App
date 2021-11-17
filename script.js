@@ -20,23 +20,26 @@ let pokemonList = [
 
 //                          ?????    Why Delete this becuase I have no where to put the Pokemons without it.  ?????
                                     // Are We I thought earlier we were creating a cariable to store our pokemon in???
-let pokemonRepository = [
-{
-  name:"",
-  height:"",
-  weight:"",
-  types:"",
-}
-];
+
 
 //
 let thisRepository = function(){
+  let pokemonRepository = [  // If I don't use this as my structure I cannot store a pokemon with any values even such a name.
+    {
+      name:"",
+      height:"",
+      weight:"",
+      types:"",
+    }
+    ];
 const pokemonListLists = []     //<--- Is this where we want to store the pokemon...????
   return  {
     
  getAll(){
   console.log(`Pokemon List:${JSON.stringify(pokemonList)}`)   //<----- Prints the list of Pokemons (If I don't do this Nothing happens)      
- }
+pokemonRepository.push(pokemonList);
+  
+}
             //?? this is the only thing that I can type here nothing else works but it doesnt' do anything  unless I
                    //  console.log(pokemonList) But that doesn't seem to be what you want. What Should go here?
  
@@ -59,13 +62,7 @@ pokemonList.forEach(Pokemon)
      console.log(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
      document.getElementById("heavyWeight").append(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
      pokemonRepository.push({name: biggest.name, height: biggest.height, weight:biggest.weight, types: biggest.types});
-       
-
-    
-     
    }
-   
-    
  }
 
 
