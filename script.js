@@ -1,71 +1,42 @@
 
-//Pokemon List Obejct Array 
-let pokemonList = [
-    {name: "Jolteon",
-    height: 0.8,
-    weight: 24.5,
-    types: "electric"}
-,
-{    name: "Flareon",
-    height: 0.9,
-    weight: 25,
-    types: "fire", },
-{
-    name: "Espeon",
-    height: 0.9,
-    weight: 26.5,
-    types: "psychic"
-}
-]
-
-//                          ?????    Why Delete this becuase I have no where to put the Pokemons without it.  ?????
-                                    // Are We I thought earlier we were creating a cariable to store our pokemon in???
-
-
-//
-let thisRepository = function(){
-  let pokemonRepository = [  // If I don't use this as my structure I cannot store a pokemon with any values even such a name.
+ let pokemonRepository = (function () {
+    let pokemonList = [ {
+     name: "jolteon",
+     types: "electric",
+     height: 0.8,
+    },
     {
-      name:"",
-      height:"",
-      weight:"",
-      types:"",
+      name: "charmander",
+      types: "fire",
+      height: 0.6,
+    },
+    {
+      name: "clefable",
+      types: "fairy",
+      height: 1.3,
     }
-    ];
-const pokemonListLists = []     //<--- Is this where we want to store the pokemon...????
-  return  {
-    
- getAll(){
-  console.log(`Pokemon List:${JSON.stringify(pokemonList)}`)   //<----- Prints the list of Pokemons (If I don't do this Nothing happens)      
-pokemonRepository.push(pokemonList);
-  
-}
-            //?? this is the only thing that I can type here nothing else works but it doesnt' do anything  unless I
-                   //  console.log(pokemonList) But that doesn't seem to be what you want. What Should go here?
- 
+];
+                                    
+  function add(pokemon) {
+   if (typeof pokemon === 'object') {
+       return pokemonList.push(pokemon);
+         } else {
+              console.log("Please use objects to input new pokemon")
+           }
+      }
+                                    
+function getAll() {
+   return pokemonList;
+  }
+   return {
+       add: add,
+          getAll: getAll
+  };
+ })();
 
-}()
-
-}
-
-   // This has an error on calling the getAll function??? getAll by itself doesn't work either it means nothing Apparently. Unless you use it as a name.
-thisRepository.getAll();
-
-// If i get Rid of this my Forloop stops printing out to the console...???? So you cant pick out a pokemon to store anymore..???
-/// How are we picking out a pokemon to store without this.????
-pokemonList.forEach(Pokemon)
-
- function Pokemon(biggest) {
-   let heavyWeight = 26.5
-   if (biggest.weight === heavyWeight){
-     
-     console.log(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
-     document.getElementById("heavyWeight").append(`Hello ${biggest.name} you are (${biggest.weight}.kg's), Wow thats Big!`)
-     pokemonRepository.push({name: biggest.name, height: biggest.height, weight:biggest.weight, types: biggest.types});
-   }
- }
-
-
-
-
- 
+ let pokemonData = pokemonRepository.getAll()
+                                    
+pokemonData.forEach(function (pokemon) {
+document.write(`<div><h2>${pokemon.name}</h2><p>${pokemon.types}</p><p>${pokemon.height}</p>
+</div>`);
+ });
