@@ -1,4 +1,7 @@
 
+
+
+
  let pokemonRepository = (function () {
     let pokemonList = [ {
      name: "jolteon",
@@ -31,12 +34,28 @@ function getAll() {
    return {
        add: add,
           getAll: getAll
+    
   };
+  function addListItem(pokemon){
+    let ulElement = document.querySelector("ulElement");
+let listItem = document.createElement("li");
+let buttons = document.createElement("button");
+buttons.classList.add(pokemon.name)
+buttons.innerText = pokemon.name;
+
+document.body.append(listItem)
+listItem.appendChild(buttons)
+ulElement.appendChild(listItem)
+
+  }
+  
  })();
 
  let pokemonData = pokemonRepository.getAll()
-                                    
+                  
 pokemonData.forEach(function (pokemon) {
-document.write(`<div><h2>${pokemon.name}</h2><p>${pokemon.types}</p><p>${pokemon.height}</p>
-</div>`);
- });
+addListItem()
+});
+
+
+let storedPokemon = [];
