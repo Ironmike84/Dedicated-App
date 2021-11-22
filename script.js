@@ -39,7 +39,7 @@ function getAll() {
      add: add,
         getAll: getAll,
         addListItem: addListItem,
-        addEvent:addEvent
+      
 };
 
 function addListItem(pokemon){
@@ -51,19 +51,12 @@ function addListItem(pokemon){
  
   listItem.appendChild(buttons)
   ulElement.append(listItem)
-  addEvent()
-  }
-
-   function addEvent(){
-    addEventListener("click", function(){
-       console.log("Event Listener Added")
-        
-    })
-   }
   
-
-
-
+  buttons.addEventListener('click', function () {
+    console.log(pokemon.name)
+    })
+  
+  }
 
 })();
 
