@@ -39,7 +39,7 @@ function getAll() {
      add: add,
         getAll: getAll,
         addListItem: addListItem,
-        advanced:advanced
+        addEvent:addEvent
 };
 
 function addListItem(pokemon){
@@ -51,18 +51,16 @@ function addListItem(pokemon){
  
   listItem.appendChild(buttons)
   ulElement.append(listItem)
-
-advanced()
-  
+  addEvent()
   }
-  function advanced(){
-    let buttons = document.createElement("button");
-    buttons.addEventListener("click", function(){
-      console.log(buttons.name)
-  
+
+   function addEvent(){
+    addEventListener("click", function(){
+       console.log("Event Listener Added")
+        
     })
-
-  }
+   }
+  
 
 
 
@@ -73,7 +71,6 @@ advanced()
 let pokemonData = pokemonRepository.getAll()
          
 pokemonData.forEach(function (pokemon) {
-
 
 pokemonRepository.addListItem(pokemon)
 
