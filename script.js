@@ -38,7 +38,8 @@ function getAll() {
  return {
      add: add,
         getAll: getAll,
-        addListItem: addListItem
+        addListItem: addListItem,
+        advanced:advanced
 };
 
 function addListItem(pokemon){
@@ -50,9 +51,19 @@ function addListItem(pokemon){
  
   listItem.appendChild(buttons)
   ulElement.append(listItem)
+
+advanced()
   
-  console.log(ulElement)
- }
+  }
+  function advanced(){
+    let buttons = document.createElement("button");
+    buttons.addEventListener("click", function(){
+      console.log(buttons.name)
+  
+    })
+
+  }
+
 
 
 
