@@ -32,7 +32,7 @@ function add(pokemon) {
 function getAll() {
   return pokemonList;
  }
-
+//---------------------------------------------------------------ADD
 function addListItem(pokemon){
   let ulElement = document.querySelector(".pokemon-list");
   let listItem = document.createElement("li");
@@ -45,15 +45,15 @@ function addListItem(pokemon){
   
   buttons.addEventListener('click', function () {
     loadDetails(pokemon).then(function () {
-      console.log(pokemon);
-     
-    });
-    
+      showDetails(pokemon)
+        });
     })
-  
+    function showDetails(pokemon){
+      console.log(pokemon)
+    }
   }
  
-
+//---------------------------------------------------------------LOAD
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
