@@ -6,14 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple JS-App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <ul class="pokemon-list">
+<h1>POKEMON LIST APP</h1>
+<!------------------------------------------------- MODAL CONTAINER------------------------------>    
+    <div class="modal-container" id="modal-container">
+
+  <button id="close">X</button>
+      
+<div id="name"></div>
+<div id="height"></div>
+<div id="imaged"><img  src="" id="pic" alt="No image"></div>
+
+    </div>
+    
+<!------------------------------------------------- POKEMON BUTTONS------------------------------>    
+<div class="pokemonButtons">
+<ul class="pokemon-list" id=pokemon-list>
         
     </ul>
-
+</div>
+   
+</body>
 <script src="promise-polyfill.js"></script>
 <script src="fetch.umd.js"></script>
 <script src="script.js"></script>
-</body>
 </html>
