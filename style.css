@@ -1,6 +1,7 @@
 body{
-    background-image: url("AdobeStock_301781680.jpeg");
-    background-size: cover;
+    font-family: 'Roboto Mono', monospace;
+    background-image: url("DiamondPlateBlack.jpg");
+    background-size: contain;
     color: bisque;
     background-color: rgb(44, 43, 43);
 }
@@ -242,3 +243,98 @@ body{
     height: 200px;
     border: 1px solid red;
 }
+
+.heavyWeight{
+    text-align: center;
+    display: flex;
+    border: 1px solid red;
+    height: 25px;
+    padding: 2px;
+    width: fit-content;
+    margin-left: 350px;
+    background-color: rgb(44, 43, 43);
+    
+}
+
+
+#modal-container{
+    display: none;
+  }
+
+#is-visible{
+
+position: sticky;
+position: -webkit-sticky;
+left: 30%;
+top:10%;
+background-color: rgba(53, 50, 50, 0.87);
+border: 1px solid red;
+justify-content: center;
+text-align: center;
+width: 500px;
+height: 300px;
+box-shadow: 1px 1px 2px black,
+            2px 2px 3px black,
+            4px 4px 8px black;
+}
+
+.is-visible{
+
+    left: 30%;
+    top:10%;
+    background-color: rgba(53, 50, 50, 0.87);
+    border: 1px solid red;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    box-shadow: 1px 1px 2px black,
+                2px 2px 3px black,
+                4px 4px 8px black;
+    }
+
+#close{
+    color: chartreuse;
+    Background: black;
+    border: 1px solid Red;
+    position: absolute;
+    right:.05px;
+    top: 0
+}
+
+.pokemonButtons{
+    background-image: url("DarkMetal.webp");
+    background-size: contain;
+    margin-left: 50px;
+    padding: 10px;
+    border: 1px outset rgb(172, 7, 7);
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329);
+}
+
+.pokemon-list{
+    list-style-type: circle;
+}
+
+button{
+    color:chartreuse;
+    font-family: 'Roboto Mono', monospace;
+    cursor:pointer;
+    margin: 5px;
+    padding: 5px;
+    border: 1px outset rgb(122, 0, 0);
+    background-color: rgba(87, 81, 81, 0.8);
+    box-shadow: 1px 1px 2px rgb(0, 0, 0),
+    2px 2px 3px rgb(0, 0, 0),
+    4px 4px 8px rgba(0, 0, 0, 1);
+    transition: 1s ease-in-out;
+}
+button:hover{
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+    2px 2px 3px rgb(134, 2, 2),
+    4px 4px 8px rgba(163, 0, 0, 0.9);
+}
+
