@@ -1,23 +1,32 @@
+  
 body{
     font-family: 'Roboto Mono', monospace;
-    background-image: url("DiamondPlateBlack.jpg");
+    background-image: url("DiamonPlate.jpg");
     background-size: contain;
     color: bisque;
     background-color: rgb(44, 43, 43);
 }
-#navbar{
-    box-shadow: 1px 1px 2px rgba(2, 2, 2, .9),
+.navbar{
+    border-top: 4px double rgba(124, 0, 0, 0.729);
+    border-bottom: 1px solid rgba(124, 0, 0, 0.729);
+    box-shadow: 
+            inset -1px -1px 2px rgba(2, 2, 2, .9),
+            inset -2px -2px 3px rgba(2, 2, 2, .6),
+            inset -4px -4px 8px rgba(2, 2, 2, .3),
+                1px 1px 2px rgba(2, 2, 2, .9),
                 2px 2px 3px rgba(2, 2, 2, .6),
-                4px 4px 6px rgba(2, 2, 2, .3);
+                3px 3px 4px rgba(2, 2, 2, .7),
+                4px 4px 6px rgba(2, 2, 2, .8);
 }
-#navbar-toggler{
+.navbar-toggler{
     position:static;
-    margin-bottom:110px;
-    margin-left:auto;
-    margin-right: 5px;
+    margin-left: auto;
+    margin-bottom: auto;
+    
+  
     border: 1px outset rgb(2, 2, 2);
 }
-#navbar-toggler:hover{
+.navbar-toggler:hover{
     position:static;
     margin-left: auto;
     border: 1px outset rgb(2, 2, 2);
@@ -25,13 +34,13 @@ body{
     inset 2px 2px 3px rgba(102, 0, 0, 0.9),
     inset 4px 4px 6px rgba(107, 0, 0, 0.9);
 }
-#navbar-toggler:focus{
+.navbar-toggler:focus{
     position:static;
     margin-left: auto;
     border: 1px outset rgb(2, 2, 2);
-    box-shadow: inset 1px 1px 2px rgba(85, 0, 0, 0.9),
-    inset 2px 2px 3px rgba(102, 0, 0, 0.9),
-    inset 4px 4px 6px rgba(107, 0, 0, 0.9);
+    box-shadow: inset 1px 1px 2px rgba(10, 10, 10, 0.9),
+                 inset 2px 2px 3px rgba(0, 0, 0, 0.5),
+                inset 3px 3px 5px rgba(2, 2, 2, 0.3);
 }
 
 .navbarSupportedContent{
@@ -55,7 +64,7 @@ body{
 }
 
 
-#nav-link:hover{
+.nav-link:hover{
     text-shadow: 1px 2px 2px rgb(8, 8, 8);
     background-color: rgb(73, 69, 69);
     margin: 5px;
@@ -64,310 +73,11 @@ body{
     box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
     inset 2px 2px 3px rgba(2, 2, 2, .9),
     inset 4px 4px 6px rgba(2, 2, 2, .9);
-    transition: .2s;
-}
-
-
-      
-
-.container{
-    display: flex;
-    flex-direction:row;
-    width: 100vw;
-
-}
-.cardTitle1{
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    color: bisque;
-}
-.profileImage1{
-    margin-left: 25px;
-    height: 150px;
-    width: 150px;
-}
-.cardBorder1{
-    background-image: url("shutterstock_466156970.jpg");
-    background-size: contain;
-    margin: 10px;
-    border-radius: 15px;
-    border: 3px solid rgba(65, 64, 64, 0.8);
-    display: flex;
-    flex-direction: row;
-    height: 330px;
-    width: 285px;
-}
-.cardPrimary1{
-    background-image: url("shutterstock_391998307.jpg");
-    background-size: cover;
-    border-radius: 15px;
-    border: 1px solid rgb(54, 54, 54);
-    padding: 7px;
-    margin-left: 9px;
-    margin-top: 9px;
-    display: flex;
-    flex-direction: column ;
-    height: 295px;
-    width: 250px;
-        
-    box-shadow:
-    2px 2px 18px rgba(0, 0, 0, 0.99),
-    -2px -2px 18px rgba(0, 0, 0, 0.99),
-    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
-    inset -12px -12px 32px rgba(0, 0, 0, 0.5), 
-    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
-    inset -12px -12px 32px rgba(0, 0, 0, 0.5),
-    inset 7px 7px 12px rgba(0, 0, 0, 0.9),
-    inset -7px -7px 12px rgba(0, 0, 0, 0.9), 
-    inset 5px 5px 8px rgba(0, 0, 0, 0.8),
-    inset -5px -5px 8px rgba(0, 0, 0, 0.8);
-}
-.cardFoot1{
-    background-color: rgba(224, 45, 0, 0.2);
-    border: 1px solid Red;
-    border-radius: 7px;
-    padding: 5px;
-    color: bisque;
-    text-align: center;
-}
-.cardTitle2{
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    color: bisque;
-}
-.profileImage2{
-    margin-left: 25px;
-    height: 150px;
-    width: 150px;
-}
-.cardBorder2{
-    background-image: url("shutterstock_466156970.jpg");
-    background-size: contain;
-    margin: 10px;
-    border-radius: 15px;
-    border: 3px solid rgba(65, 64, 64, 0.8);
-    display: flex;
-    flex-direction: row;
-    height: 330px;
-    width: 285px;
-}
-.cardPrimary2{
-    background-image: url("shutterstock_391998307.jpg");
-    background-size: cover;
-    border-radius: 15px;
-    border: 1px solid rgb(54, 54, 54);
-    padding: 7px;
-    margin-left: 9px;
-    margin-top: 9px;
-    display: flex;
-    flex-direction: column ;
-    height: 295px;
-    width: 250px;
-        
-    box-shadow:
-    2px 2px 18px rgba(0, 0, 0, 0.99),
-    -2px -2px 18px rgba(0, 0, 0, 0.99),
-    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
-    inset -12px -12px 32px rgba(0, 0, 0, 0.5), 
-    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
-    inset -12px -12px 32px rgba(0, 0, 0, 0.5),
-    inset 7px 7px 12px rgba(0, 0, 0, 0.9),
-    inset -7px -7px 12px rgba(0, 0, 0, 0.9), 
-    inset 5
-    px 5px 8px rgba(0, 0, 0, 0.8),
-    inset -5px -5px 8px rgba(0, 0, 0, 0.8);
-}
-.cardFoot2{
-    background-color: rgba(224, 45, 0, 0.2);
-    border: 1px solid Red;
-    border-radius: 7px;
-    padding: 5px;
-    color: bisque;
-    text-align: center;
-}
-
-.cardTitle3{
-    display: flex;
-    flex-direction: column;
-    font-family: sans-serif;
-    color: bisque;
-}
-.profileImage3{
-    margin-left: 25px;
-    height: 150px;
-    width: 150px;
-}
-.cardBorder3{
-    background-image: url("shutterstock_466156970.jpg");
-    background-size: contain;
-    margin: 10px;
-    border-radius: 15px;
-    border: 3px solid rgba(65, 64, 64, 0.8);
-    display: flex;
-    flex-direction: row;
-    height: 330px;
-    width: 285px;
-}
-.cardPrimary3{
-    background-image: url("shutterstock_391998307.jpg");
-    background-size: cover;
-    border-radius: 15px;
-    border: 1px solid rgb(54, 54, 54);
-    padding: 7px;
-    margin-left: 9px;
-    margin-top: 9px;
-    display: flex;
-    flex-direction: column ;
-    height: 295px;
-    width: 250px;
-        
-    box-shadow:
-    2px 2px 18px rgba(0, 0, 0, 0.99),
-    -2px -2px 18px rgba(0, 0, 0, 0.99),
-    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
-    inset -12px -12px 32px rgba(0, 0, 0, 0.5), 
-    inset 12px 12px 32px rgba(0, 0, 0, 0.5),
-    inset -12px -12px 32px rgba(0, 0, 0, 0.5),
-    inset 7px 7px 12px rgba(0, 0, 0, 0.9),
-    inset -7px -7px 12px rgba(0, 0, 0, 0.9), 
-    inset 5px 5px 8px rgba(0, 0, 0, 0.8),
-    inset -5px -5px 8px rgba(0, 0, 0, 0.8);
-}
-.cardFoot3{
-    background-color: rgba(224, 45, 0, 0.2);
-    border: 1px solid Red;
-    border-radius: 7px;
-    padding: 5px;
-    color: bisque;
-    text-align: center;
-}
-
-#box1{
-    position: absolute;
-    top: 400px;
-
-    left: 200px;
-
-    left: 150px;
-
-    display: flex;
-    flex-direction: row;
-    padding: 7px;
-    height: 200px fit-content;
-    width: 200px fit-content;
-    border: 1px solid red;
-    background-color: rgba(36, 35, 35,0.8);
-    display:block;
-}
-
-#box2{
-    position: absolute;
-    top: 400px;
-
-    left: 400px;
-
-    left: 350px;
-
-    display: flex;
-    flex-direction: row;
-    padding: 7px;
-    height: 200px fit-content;
-    width: 200px fit-content;
-    border: 1px solid red;
-    background-color: rgba(36, 35, 35,0.8);
-    display:block;
-}
-
-#box3{
-    position: absolute;
-    top: 400px;
-    left: 600px;
-    left: 550px;
-    display: flex;
-    flex-direction: row;
-    padding: 7px;
-    height: 200px fit-content;
-    width: 200px fit-content;
-    border: 1px solid red;
-    background-color: rgba(36, 35, 35,0.8);
-    display:block
-}
-.cardBody {
-    display: flex;
-    flex-direction: row;
-    width: 100px;
-    height: 200px;
-    border: 1px solid red;
-}
-.cardBody {
-    display: flex;
-    flex-direction: row;
-    width: 100px;
-    height: 200px;
-    border: 1px solid red;
-}
-
-.heavyWeight{
-    text-align: center;
-    display: flex;
-    border: 1px solid red;
-    height: 25px;
-    padding: 2px;
-    width: fit-content;
-    margin-left: 350px;
-    background-color: rgb(44, 43, 43);
-    
-}
-
-
-#modal-container{
-    display: none;
-  }
-
-#is-visible{
-
-position: sticky;
-position: -webkit-sticky;
-left: 30%;
-top:10%;
-background-color: rgba(53, 50, 50, 0.87);
-border: 1px solid red;
-justify-content: center;
-text-align: center;
-width: 500px;
-height: 300px;
-box-shadow: 1px 1px 2px black,
-            2px 2px 3px black,
-            4px 4px 8px black;
-}
-
-.is-visible{
-
-    left: 30%;
-    top:10%;
-    background-color: rgba(53, 50, 50, 0.87);
-    border: 1px solid red;
-    justify-content: center;
-    text-align: center;
-    width: 500px;
-    height: 300px;
-    box-shadow: 1px 1px 2px black,
-                2px 2px 3px black,
-                4px 4px 8px black;
-    }
-
-#close{
-    color: chartreuse;
-    Background: black;
-    border: 1px solid Red;
-    position: absolute;
-    right:.05px;
-    top: 0
+    transition: .7s;
 }
 
 .pokemonButtons{
+    
     background-image: url("DarkMetal.webp");
     background-size: contain;
     margin-left: 50px;
@@ -378,6 +88,19 @@ box-shadow: 1px 1px 2px black,
     box-shadow: 1px 1px 2px rgb(170, 0, 0),
                 2px 2px 3px rgb(104, 1, 1),
                 4px 4px 8px rgba(163, 0, 0, 0.329);
+                transition: 3s;
+}
+
+.pokemonButtons:hover{
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329),
+                5px 5px 8px rgba(0, 136, 11, 0.729),
+                6px 6px 10px rgba(14, 124, 0, 0.729),
+                -1px -1px 2px rgba(170, 0, 0, 0.4),
+                -2px -2px 3px rgba(170, 0, 0, 0.4),
+                -4px -4px 8px rgba(40, 170, 0,.4);
+                
 }
 
 .pokemon-list{
@@ -406,97 +129,79 @@ button:hover{
     4px 4px 8px rgba(163, 0, 0, 0.9);
 }
 
-#close{
-    cursor: pointer;
-    border: 1px outset rgb(177, 170, 170);
+button:focus{
+    border-radius: 10px;
+    border: 1px inset chartreuse;
+    background-color: rgba(131, 0, 0, 0.44);
+    box-shadow:
+    inset 1px 1px 2px rgba(0, 0, 0, 0.74),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.64),
+    inset 4px 4px 6px rgba(0, 0, 0, 0.34),
+    1px 1px 2px rgba(0, 95, 8, 0.5),
+    2px 2px 3px rgba(0, 95, 8, 0.5),
+    4px 4px 8px rgba(0, 95, 8, 0.5);
 }
-#close:hover{
-    border: 1px outset rgb(158, 151, 151);
-    box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
-                2px 2px 3px rgba(131, 0, 0, 0.74),
-                4px 4px 6px rgba(131, 0, 0, 0.74);
-}
-
-#closeOut{
-    cursor: pointer;
-    height: 20px;
-    width: 20px;
-    border: 1px outset rgb(34, 32, 32);
-}
-#closeOut:hover{
-    border: 1px outset red;
-    box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
-                2px 2px 3px rgba(131, 0, 0, 0.74),
-                4px 4px 6px rgba(131, 0, 0, 0.74);
-}
-
 
 #exampleModalCenter{
     display: block;
     position: fixed;
     top:100px;
-    left: 300px;
-    height: auto;
+    left: 500px;
+    height:fit-content;
     width: 500px ;
     border-radius: 15px;
    box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
     2px 2px 3px rgba(15, 15, 15, 0.74),
     4px 4px 6px rgba(0, 0, 0, 0.74);
-
+    transition: 1s ease-in-out;
 }
-
 
 #exampleModalCenterShow{
     position: fixed;
     top:200px;
     left: 500px;
-    height: 400px;
+    height: 750px;
     width: 300px;
     border: 1px solid rgb(7, 6, 6);
     box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
     2px 2px 3px rgba(15, 15, 15, 0.74),
-    4px 4px 6px rgba(0, 0, 0, 0.74);
-    
-}
-.exampleModalCenterHide{
-display:none;
-overflow: hidden;
+    4px 4px 6px rgba(0, 0, 0, 0.74);  
 }
 
 .hide{
     display:none;
-    } 
-    
-
-/* .modal-header{
-    position: absolute;
-    top:0px;
+} 
+/* ----------------------------------------------------------------------------------------------------MODAL */
+ .modal-header{
+    font-weight: bold;
     width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     border-top: none;
-    border-bottom: 1px inset rgba(17, 16, 16, 0.74);
+    border-bottom: 1px inset rgba(58, 56, 56, 0.74);
     box-shadow: 1px 1px 2px rgba(22, 21, 21, 0.74),
                 2px 2px 3px rgba(22, 21, 21, 0.74),
                 4px 4px 8px rgba(22, 21, 21, 0.74);
     }
+
+
 .modal-body{
-    position: absolute;
-    top: 70px;
-    border-top: none;
-    border-bottom: none;
+background-color: rgba(36, 34, 34, 0.54);
     height: 300px;
 } */
-/* #name{
-    position: fixed;
+#named{
+color: red;
 }
 #height{
-position: fixed;
-} */
+color: red;
+} */ */
 #pic{
     position: absolute;
     top: 120px;
     left: 100px
 }
-/* .modal-footer{
+
+.modal-footer{
         position: inherit;
         border-top: 1px inset rgba(173, 168, 168, 0.74);
         border-bottom: none;
@@ -505,34 +210,34 @@ position: fixed;
                     -4px -4px 8px rgba(22, 21, 21, 0.74);
        } */
 
-#closeButton{
-    
-    border: 1px outset rgb(133, 125, 125);
-}
+
 #closeButton:hover{
     border: 1px outset red;
     box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
                 2px 2px 3px rgba(131, 0, 0, 0.74),
                 4px 4px 6px rgba(131, 0, 0, 0.74);
 }
-
+ 
 #closeOut{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     top: 1px;
-    right: 1px;
+    right: 5px;
     border: 1px outset rgb(82, 77, 77);
-}
+} 
 #closeOut:hover{
-    border: 1px outset rgb(15, 14, 14);
+    background-color: rgba(102, 0, 0, 0.2);
+    border: 1px outset rgb(163, 0, 0);
     box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
                 2px 2px 3px rgba(131, 0, 0, 0.74),
                 4px 4px 6px rgba(131, 0, 0, 0.74);
 }
+
+
 
 @media screen and (min-width: 500px) {
     #navbar-toggler{
@@ -543,6 +248,17 @@ position: fixed;
         border: 1px outset rgb(2, 2, 2);
     }
     
+    #navbarSupportedContent{
+        text-align: center;
+        border: 1px inset rgb(116, 4, 4);
+        border-radius: 5px;
+        width: 300px;
+        box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                    inset 2px 2px 3px rgba(2, 2, 2, .6),
+                    inset 4px 4px 6px rgba(2, 2, 2, .3),
+                    inset -1px -1px 2px rgba(2, 2, 2, .9),
+                    inset -2px -2px 3px rgba(2, 2, 2, .6),
+                    inset -4px -4px 6px rgba(2, 2, 2, .3);
     }
 
 @media screen and (max-width: 500px) {
@@ -556,3 +272,4 @@ position: fixed;
                     inset 4px 4px 6px rgba(2, 2, 2, .3);
     }
         }
+    }
