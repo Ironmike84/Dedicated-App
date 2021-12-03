@@ -1,0 +1,1 @@
+let navbarToggler=$(".navbar-toggler");$(navbarToggler).click(function(a){let e=$("#navbarSupportedContent");$(e).removeClass("collapse navbar-collapse"),$(e).toggle("expand navbar-expand")});
