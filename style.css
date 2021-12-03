@@ -5,6 +5,71 @@ body{
     color: bisque;
     background-color: rgb(44, 43, 43);
 }
+#navbar{
+    box-shadow: 1px 1px 2px rgba(2, 2, 2, .9),
+                2px 2px 3px rgba(2, 2, 2, .6),
+                4px 4px 6px rgba(2, 2, 2, .3);
+}
+#navbar-toggler{
+    position:static;
+    margin-bottom:110px;
+    margin-left:auto;
+    margin-right: 5px;
+    border: 1px outset rgb(2, 2, 2);
+}
+#navbar-toggler:hover{
+    position:static;
+    margin-left: auto;
+    border: 1px outset rgb(2, 2, 2);
+    box-shadow: inset 1px 1px 2px rgba(85, 0, 0, 0.9),
+    inset 2px 2px 3px rgba(102, 0, 0, 0.9),
+    inset 4px 4px 6px rgba(107, 0, 0, 0.9);
+}
+#navbar-toggler:focus{
+    position:static;
+    margin-left: auto;
+    border: 1px outset rgb(2, 2, 2);
+    box-shadow: inset 1px 1px 2px rgba(85, 0, 0, 0.9),
+    inset 2px 2px 3px rgba(102, 0, 0, 0.9),
+    inset 4px 4px 6px rgba(107, 0, 0, 0.9);
+}
+
+.navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(15, 15, 15);
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+#navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(119, 0, 0);
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+
+#nav-link:hover{
+    text-shadow: 1px 2px 2px rgb(8, 8, 8);
+    background-color: rgb(73, 69, 69);
+    margin: 5px;
+    border: 1px solid rgb(119, 2, 2);
+    border-radius: 7px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+    inset 2px 2px 3px rgba(2, 2, 2, .9),
+    inset 4px 4px 6px rgba(2, 2, 2, .9);
+    transition: .2s;
+}
+
+
+      
+
 .container{
     display: flex;
     flex-direction:row;
@@ -320,13 +385,16 @@ box-shadow: 1px 1px 2px black,
 }
 
 button{
+    margin-top: 7px;
+    margin-bottom: 7px;
     color:chartreuse;
     font-family: 'Roboto Mono', monospace;
     cursor:pointer;
-    margin: 5px;
-    padding: 5px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
     border: 1px outset rgb(122, 0, 0);
-    background-color: rgba(87, 81, 81, 0.8);
+    background-color: rgba(20, 20, 20, 0.8);
     box-shadow: 1px 1px 2px rgb(0, 0, 0),
     2px 2px 3px rgb(0, 0, 0),
     4px 4px 8px rgba(0, 0, 0, 1);
@@ -338,3 +406,153 @@ button:hover{
     4px 4px 8px rgba(163, 0, 0, 0.9);
 }
 
+#close{
+    cursor: pointer;
+    border: 1px outset rgb(177, 170, 170);
+}
+#close:hover{
+    border: 1px outset rgb(158, 151, 151);
+    box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
+                2px 2px 3px rgba(131, 0, 0, 0.74),
+                4px 4px 6px rgba(131, 0, 0, 0.74);
+}
+
+#closeOut{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 1px outset rgb(34, 32, 32);
+}
+#closeOut:hover{
+    border: 1px outset red;
+    box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
+                2px 2px 3px rgba(131, 0, 0, 0.74),
+                4px 4px 6px rgba(131, 0, 0, 0.74);
+}
+
+
+#exampleModalCenter{
+    display: block;
+    position: fixed;
+    top:100px;
+    left: 300px;
+    height: auto;
+    width: 500px ;
+    border-radius: 15px;
+   box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+
+}
+
+
+#exampleModalCenterShow{
+    position: fixed;
+    top:200px;
+    left: 500px;
+    height: 400px;
+    width: 300px;
+    border: 1px solid rgb(7, 6, 6);
+    box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+    
+}
+.exampleModalCenterHide{
+display:none;
+overflow: hidden;
+}
+
+.hide{
+    display:none;
+    } 
+    
+
+/* .modal-header{
+    position: absolute;
+    top:0px;
+    width: 100%;
+    border-top: none;
+    border-bottom: 1px inset rgba(17, 16, 16, 0.74);
+    box-shadow: 1px 1px 2px rgba(22, 21, 21, 0.74),
+                2px 2px 3px rgba(22, 21, 21, 0.74),
+                4px 4px 8px rgba(22, 21, 21, 0.74);
+    }
+.modal-body{
+    position: absolute;
+    top: 70px;
+    border-top: none;
+    border-bottom: none;
+    height: 300px;
+} */
+/* #name{
+    position: fixed;
+}
+#height{
+position: fixed;
+} */
+#pic{
+    position: absolute;
+    top: 120px;
+    left: 100px
+}
+/* .modal-footer{
+        position: inherit;
+        border-top: 1px inset rgba(173, 168, 168, 0.74);
+        border-bottom: none;
+        box-shadow: -1px -1px 2px rgba(22, 21, 21, 0.74),
+                    -2px -2px 3px rgba(22, 21, 21, 0.74),
+                    -4px -4px 8px rgba(22, 21, 21, 0.74);
+       } */
+
+#closeButton{
+    
+    border: 1px outset rgb(133, 125, 125);
+}
+#closeButton:hover{
+    border: 1px outset red;
+    box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
+                2px 2px 3px rgba(131, 0, 0, 0.74),
+                4px 4px 6px rgba(131, 0, 0, 0.74);
+}
+
+#closeOut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 1px;
+    right: 1px;
+    border: 1px outset rgb(82, 77, 77);
+}
+#closeOut:hover{
+    border: 1px outset rgb(15, 14, 14);
+    box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
+                2px 2px 3px rgba(131, 0, 0, 0.74),
+                4px 4px 6px rgba(131, 0, 0, 0.74);
+}
+
+@media screen and (min-width: 500px) {
+    #navbar-toggler{
+        position:static;
+        margin-bottom:auto;
+        margin-left:auto;
+        margin-right: 5px;
+        border: 1px outset rgb(2, 2, 2);
+    }
+    
+    }
+
+@media screen and (max-width: 500px) {
+    #navbarSupportedContent{
+        text-align: center;
+        border: 1px inset rgb(94, 139, 21);
+        border-radius: 5px;
+        width: 200px;
+        box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                    inset 2px 2px 3px rgba(2, 2, 2, .6),
+                    inset 4px 4px 6px rgba(2, 2, 2, .3);
+    }
+        }
