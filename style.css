@@ -4,6 +4,7 @@ body{
     background-size: contain;
     color: bisque;
     background-color: rgb(44, 43, 43);
+    font-size: 12pt;
 }
 .navbar{
     border-top: 4px double rgba(124, 0, 0, 0.729);
@@ -155,6 +156,16 @@ button:focus{
     transition: 1s ease-in-out;
 }
 
+#searchItem{
+    background-color: black;
+    border: 1px inset black;
+}
+#searchItem:focus{
+    background-color: black;
+    border: 1px inset rgb(95, 0, 0);
+}
+
+
 #exampleModalCenterShow{
     position: fixed;
     top:200px;
@@ -177,6 +188,7 @@ button:focus{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     border-top: none;
+    height: 50px;
     border-bottom: 1px inset rgba(58, 56, 56, 0.74);
     box-shadow: 1px 1px 2px rgba(22, 21, 21, 0.74),
                 2px 2px 3px rgba(22, 21, 21, 0.74),
@@ -186,8 +198,8 @@ button:focus{
 
 .modal-body{
 background-color: rgba(36, 34, 34, 0.54);
-    height: 300px;
-} */
+    height: 250px;
+} 
 #named{
 color: red;
 }
@@ -201,16 +213,27 @@ color: red;
 }
 
 .modal-footer{
+        padding: 0px;
         position: inherit;
         border-top: 1px inset rgba(173, 168, 168, 0.74);
         border-bottom: none;
+        height: 50px;
         box-shadow: -1px -1px 2px rgba(22, 21, 21, 0.74),
                     -2px -2px 3px rgba(22, 21, 21, 0.74),
                     -4px -4px 8px rgba(22, 21, 21, 0.74);
-       } */
+       }
 
+       
+.close{
+    cursor: pointer;
+    border: 1px outset red;
+    box-shadow: 1px 1px 2px rgba(24, 23, 23, 0.74),
+                2px 2px 3px rgba(17, 16, 16, 0.74),
+                4px 4px 6px rgba(10, 10, 10, 0.34);
+}
 
-#closeButton:hover{
+.close:hover{
+    cursor: pointer;
     border: 1px outset red;
     box-shadow: 1px 1px 2px rgba(131, 0, 0, 0.74),
                 2px 2px 3px rgba(131, 0, 0, 0.74),
@@ -260,7 +283,8 @@ color: red;
     
     #navbarSupportedContent{
         text-align: center;
-        border: 1px inset rgb(116, 4, 4);
+        border: 1px inset rgb(109, 1, 1);
+        justify-content: end;
         border-radius: 5px;
         width: 300px;
         box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
@@ -271,7 +295,76 @@ color: red;
                     inset -4px -4px 6px rgba(2, 2, 2, .3);
     }
 
-@media screen and (max-width: 500px) {
+
+/* -------------------------------------------------------------------------------------------------I-Phone */
+@media only screen 
+  and (min-device-width: 540px) 
+  and (max-device-width: 720px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    
+  body{
+    background-size: cover;
+}
+#navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(94, 139, 21);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+#exampleModalCenter{
+    display: block;
+    position: fixed;
+    top:120px;
+    left: 5px;
+    height:200px;
+    width: 250px;
+    height: fit-content;
+    border-radius: 15px;
+   box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+    transition: 1s ease-in-out;
+}
+
+.modal-body{
+    background-color: rgba(36, 34, 34, 0.54);
+        height: 200px;
+    } 
+
+.pokemonButtons{
+    text-align: center;
+    position: fixed;
+    top: 470px;
+    right: 10px;
+
+    background-image: url("DarkMetal.webp");
+    background-size: contain;     
+    border: 3px outset rgb(14, 12, 12);
+    border-radius: 15px;
+    height: 200px;
+    width: 255px;
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329);
+                transition: 3s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+}    
+    
+
+
+ @media screen and (max-width: 500px) {
+
+    body{
+        background-size: cover;
+    }
     #navbarSupportedContent{
         text-align: center;
         border: 1px inset rgb(94, 139, 21);
@@ -281,5 +374,410 @@ color: red;
                     inset 2px 2px 3px rgba(2, 2, 2, .6),
                     inset 4px 4px 6px rgba(2, 2, 2, .3);
     }
-        }
+
+    #exampleModalCenter{
+        display: block;
+        position: fixed;
+        top:75px;
+        left: 30px;
+        height:fit-content;
+        width: 450px;
+        height: fit-content;
+        border-radius: 15px;
+       box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+        2px 2px 3px rgba(15, 15, 15, 0.74),
+        4px 4px 6px rgba(0, 0, 0, 0.74);
+        transition: 1s ease-in-out;
     }
+
+    .modal-body{
+        background-color: rgba(36, 34, 34, 0.54);
+            height: 200px;
+        } 
+    
+    .pokemonButtons{
+        text-align: center;
+        position: fixed;
+        top: 400px;
+        left: 70px;
+
+        background-image: url("DarkMetal.webp");
+        background-size: contain;     
+        border: 3px outset rgb(14, 12, 12);
+        border-radius: 15px;
+        height: 200px;
+        width: 300px;
+        box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                    2px 2px 3px rgb(104, 1, 1),
+                    4px 4px 8px rgba(163, 0, 0, 0.329);
+                    transition: 3s;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    
+} 
+}
+/* -------------------------------------------------------------------------------------GALAXY 9 */
+    @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  {
+
+    body{
+        background-size: cover;
+    }
+    #navbarSupportedContent{
+        text-align: center;
+        border: 1px inset rgb(94, 139, 21);
+        border-radius: 5px;
+        width: 200px;
+        box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                    inset 2px 2px 3px rgba(2, 2, 2, .6),
+                    inset 4px 4px 6px rgba(2, 2, 2, .3);
+    }
+
+    #exampleModalCenter{
+        display: block;
+        position: fixed;
+        top:120px;
+        left: 5px;
+        height:200px;
+        width: 300px;
+        height: fit-content;
+        border-radius: 15px;
+       box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+        2px 2px 3px rgba(15, 15, 15, 0.74),
+        4px 4px 6px rgba(0, 0, 0, 0.74);
+        transition: 1s ease-in-out;
+    }
+
+    .modal-body{
+        background-color: rgba(36, 34, 34, 0.54);
+            height: 200px;
+        } 
+    
+    .pokemonButtons{
+        text-align: center;
+        position: fixed;
+        top: 470px;
+        right: 30px;
+
+        background-image: url("DarkMetal.webp");
+        background-size: contain;     
+        border: 3px outset rgb(14, 12, 12);
+        border-radius: 15px;
+        height: 200px;
+        width: 255px;
+        box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                    2px 2px 3px rgb(104, 1, 1),
+                    4px 4px 8px rgba(163, 0, 0, 0.329);
+                    transition: 3s;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }   
+}
+
+/* -------------------------------------------------------------------------------------I Phone 7 */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+{
+
+  body{
+      background-size: cover;
+  }
+  #navbarSupportedContent{
+      text-align: center;
+      border: 1px inset rgb(94, 139, 21);
+      border-radius: 5px;
+      width: 200px;
+      box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                  inset 2px 2px 3px rgba(2, 2, 2, .6),
+                  inset 4px 4px 6px rgba(2, 2, 2, .3);
+  }
+
+  #exampleModalCenter{
+      display: block;
+      position: fixed;
+      top:120px;
+      left: 5px;
+      height:200px;
+      width: 300px;
+      height: fit-content;
+      border-radius: 15px;
+     box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+      2px 2px 3px rgba(15, 15, 15, 0.74),
+      4px 4px 6px rgba(0, 0, 0, 0.74);
+      transition: 1s ease-in-out;
+  }
+
+  .modal-body{
+      background-color: rgba(36, 34, 34, 0.54);
+          height: 200px;
+      } 
+  
+  .pokemonButtons{
+      text-align: center;
+      position: fixed;
+      top: 470px;
+      right: 30px;
+
+      background-image: url("DarkMetal.webp");
+      background-size: contain;     
+      border: 3px outset rgb(14, 12, 12);
+      border-radius: 15px;
+      height: 200px;
+      width: 255px;
+      box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                  2px 2px 3px rgb(104, 1, 1),
+                  4px 4px 8px rgba(163, 0, 0, 0.329);
+                  transition: 3s;
+      overflow-x: hidden;
+      overflow-y: scroll;
+  }
+  
+}
+/* -------------------------------------------------------------------------------------------------I-Phone */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    
+  body{
+    background-size: cover;
+}
+#navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(94, 139, 21);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+#exampleModalCenter{
+    display: block;
+    position: fixed;
+    top:120px;
+    left: 50px;
+    height:200px;
+    width: 300px;
+    height: fit-content;
+    border-radius: 15px;
+   box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+    transition: 1s ease-in-out;
+}
+
+.modal-body{
+    background-color: rgba(36, 34, 34, 0.54);
+        height: 200px;
+    } 
+
+.pokemonButtons{
+    text-align: center;
+    position: fixed;
+    top: 470px;
+    right: 40px;
+
+    background-image: url("DarkMetal.webp");
+    background-size: contain;     
+    border: 3px outset rgb(14, 12, 12);
+    border-radius: 15px;
+    height: 200px;
+    width: 255px;
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329);
+                transition: 3s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+}
+
+
+/* -------------------------------------------------------------------------------------------------I-Phone */
+@media only screen 
+  and (min-device-width: 280px) 
+  and (max-device-width: 653px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    
+  body{
+    background-size: cover;
+}
+#navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(94, 139, 21);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+#exampleModalCenter{
+    display: block;
+    position: fixed;
+    top:120px;
+    left: 15px;
+    height:200px;
+    width: 250px;
+    height: fit-content;
+    border-radius: 15px;
+   box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+    transition: 1s ease-in-out;
+}
+
+.modal-body{
+    background-color: rgba(36, 34, 34, 0.54);
+        height: 200px;
+    } 
+
+.pokemonButtons{
+    text-align: center;
+    position: fixed;
+    top: 470px;
+    right: 10px;
+
+    background-image: url("DarkMetal.webp");
+    background-size: contain;     
+    border: 3px outset rgb(14, 12, 12);
+    border-radius: 15px;
+    height: 200px;
+    width: 255px;
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329);
+                transition: 3s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+}
+
+/* -------------------------------------------------------------------------------------------------I-Phone */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    
+body{
+    background-size: cover;
+}
+
+#navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(94, 139, 21);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+#exampleModalCenter{
+    display: block;
+    position: fixed;
+    top:120px;
+    left: 55px;
+    height:200px;
+    width: 250px;
+    height: fit-content;
+    border-radius: 15px;
+   box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+    transition: 1s ease-in-out;
+}
+
+.modal-body{
+    background-color: rgba(36, 34, 34, 0.54);
+        height: 200px;
+    } 
+
+.pokemonButtons{
+    text-align: center;
+    position: fixed;
+    top: 470px;
+    right: 50px;
+
+    background-image: url("DarkMetal.webp");
+    background-size: contain;     
+    border: 3px outset rgb(14, 12, 12);
+    border-radius: 15px;
+    height: 180px;
+    width: 255px;
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329);
+                transition: 3s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+}
+
+/* -------------------------------------------------------------------------------------------------I-Phone */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    
+body{
+    background-size: contain;
+}
+
+#navbarSupportedContent{
+    text-align: center;
+    border: 1px inset rgb(94, 139, 21);
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: inset 1px 1px 2px rgba(2, 2, 2, .9),
+                inset 2px 2px 3px rgba(2, 2, 2, .6),
+                inset 4px 4px 6px rgba(2, 2, 2, .3);
+}
+
+#exampleModalCenter{
+    display: block;
+    position: fixed;
+    top:120px;
+    left: 355px;
+    height:200px;
+    width: 250px;
+    height: fit-content;
+    border-radius: 15px;
+   box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
+    2px 2px 3px rgba(15, 15, 15, 0.74),
+    4px 4px 6px rgba(0, 0, 0, 0.74);
+    transition: 1s ease-in-out;
+}
+
+.modal-body{
+    background-color: rgba(36, 34, 34, 0.54);
+        height: 200px;
+    } 
+
+.pokemonButtons{
+    background-image: url("DarkMetal.webp");
+    background-size: contain;
+    margin-left: 50px;
+    padding: 10px;
+    border: 1px outset rgb(172, 7, 7);
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+                2px 2px 3px rgb(104, 1, 1),
+                4px 4px 8px rgba(163, 0, 0, 0.329);
+                transition: 3s;
+}
+
+}
