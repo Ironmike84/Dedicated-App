@@ -10,35 +10,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+   
 </head>
 <body>
 
 <!-- ------------------------------------------------------------------------------------------------------NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand text-danger" href="#">Pokemon APP</a>
-    <button class="navbar-toggler btn-danger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  <!---------------------------------------------------------------------------NAV CONTENT-  -->
-    <div class="collapse navbar-collapse" " id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-danger" href="#">Home <span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" >Link 3</a>
-        </li>
-      </ul>
-      
-    </div>
-  </nav> 
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand text-danger" href="#">Pokemon APP</a>
+          <button class="navbar-toggler btn-danger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-danger" id="links" href="#">Link 1</a></li>
+                  <li><a class="dropdown-item text-danger" id="links" href="#">Link 2</a></li>
+                  <li><a class="dropdown-item text-danger" id="links" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider border-danger"></li>
+                  <li><a class="dropdown-item text-danger" id="links" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control  bg-dark text-light " id="searchItem" type="input" placeholder="Search" aria-label="Search">
+              <button class="" id="search" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
 <br>
 <br>
 
@@ -71,17 +85,15 @@
       </div>
     </div>
   </div>
-<!--------------------------------------------------------------------------------------------------------------------->
 </body>
-
 
 <!-- ----------------------------------------------------------------------------------------------------SCRIPTS---------->
 <script src="fetch.umd.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="Modal Script.js"></script>
-<script src="NavBar Script.js"></script>
 <script src="script.js"></script>
-<script src="C:\Users\TRDFRG\Desktop\Simple-js-app\Dedicated-App\Test\NavScript.js"></script>
+<script src="NavBar Script.js"></script>
+<script src="eslint.eslintrc"></script>
 <script src="promise-polyfill.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
