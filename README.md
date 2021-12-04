@@ -24,4 +24,7 @@ CSS Styling was updated to include Alteration to the bootstrap styling. Adding m
 All JavaScript and Jquery were Minified and linked to the IndexMini.html File for the Minified version of the  Application.
 
 ES Lint was Used to Debug all code and check for errors. No errors Were found to correct. App Is working Properly.
+ES lint was integrated Into the Application VIA Source Code and inserting Source Script file into index.html
+
+Search Bar was added to include the ability to search and find a pokemon to diplay its details via javascript.
 
