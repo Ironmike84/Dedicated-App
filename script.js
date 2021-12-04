@@ -1,7 +1,8 @@
-
   //-------------------------------------------POKEMON APP------------------------------------------------------------------
   //========================================================================================================================
   
+
+  //-------------------------------------------------------------------------Set Default View for Modal Box
   function setdefault(){
     let modalHide= document.getElementById('exampleModalCenter')
     modalHide.style.opacity = ".001"
@@ -13,32 +14,31 @@
   let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-                                    
-   function add(pokemon) {
-    if (typeof pokemon === 'object') {
-        return pokemonList.push(pokemon);
-          } else {
-               console.log("Please use objects to input new pokemon")
-            }
-       }
    return {
+     
         add: add,
            getAll: getAll,
            addListItem: addListItem,
            loadList:loadList,
            loadDetails:loadDetails,    
            modalClick:modalClick,
-           showModal:showModal,
-               
+           showModal:showModal,               
    };
    
-   
+   function add(pokemon) {
+    if (typeof pokemon === 'object') {
+        return pokemonList.push(pokemon),
+        myPokemonlist.push(pokemon);
+          } else {
+               console.log("Please use objects to input new pokemon")
+            }
+       }
+
    //---------------------------------------------------------------GET
    function getAll() {
      return pokemonList;
     }
-   
-   
+      
     //---------------------------------------------------------------ADD
    function addListItem(pokemon){
      let ulElement = document.querySelector(".pokemon-list");
@@ -52,9 +52,33 @@
      let pic = document.getElementById("pic")
      listItem.appendChild(buttons)
      ulElement.append(listItem)
-     
-     
-  
+
+//---------------------------------------------------------------------------------------------SEARCH BOX MODAL SHOW     
+let search = document.getElementById('search')     
+     search.addEventListener('click', function () {
+      let searchItem = document.getElementById('searchItem').value;
+
+      if (searchItem === pokemon.name){
+      loadDetails(pokemon).then(function () {
+       let modal = document.getElementById('exampleModalCenter')
+        showDetails(pokemon)
+        named.innerText = `Name: ${pokemon.name}`;
+        named.style.fontWeight = 'bold'
+        named.style.color = "red"
+        height.innerText = `Height: ${pokemon.height}`
+        height.style.fontWeight = 'bold'
+        pic.src = pokemon.imageUrl
+        pic.style.width = "175px"
+        pic.style.height = "175px"
+        pic.style.position = "absolute"
+        pic.style.left = "50px"
+         modal.style.opacity = "1.5"   
+          });
+        }else{
+          console.log('failed')
+        }
+      })
+  // --------------------------------------------------------------------------------------------POKEMON BUTTON MODAL CLICK
   
      buttons.addEventListener('click', function () {
        loadDetails(pokemon).then(function () {
@@ -70,9 +94,7 @@
          pic.style.height = "175px"
          pic.style.position = "absolute"
          pic.style.left = "50px"
-          modal.style.opacity = "1.5"
-        
-        
+          modal.style.opacity = "1.5"   
            });
        })
    //---------------------------------------------------------------SHOW POKEMON
@@ -81,30 +103,21 @@
          let modalValue = document.getElementById("exampleModalCenter");
          let button = document.getElementById("close");
          let ModalBody = document.getElementById('modal-body')
-      
-          
-       
          let pic = document.getElementById('pic')
-     
          console.log(pokemon.name)
          console.log(pokemon.height)
-         
-         
+
    //-----------------------------------------------------------------------IF STATEMENT FOR EMPTY BOX VALUE IN BOX.        
           if (modalValue === false) {
            named.innerText = `Name: ${pokemon.name}`;
            height.innerText = `Height: ${pokemon.height}`
-           
            pic.src = pokemon.imageUrl
-         
            modal.append(pic)
            modal.append(button)
          console.log(pokemon)
          }
-        
        }
-     }
-    
+      }
    //---------------------------------------------------------------LOAD LIST
      function loadList() {
        return fetch(apiUrl).then(function (response) {
@@ -113,7 +126,9 @@
          json.results.forEach(function (item) {
            let pokemon = {
              name: item.name,
-             detailsUrl: item.url
+             detailsUrl: item.url,
+             height: item.height,
+             image: item.imageUrl
            };
            add(pokemon);
            });
@@ -136,6 +151,10 @@
          pokemonList.push(item.name);
          pokemonList.push(item.height);
          pokemonList.push(item.imageUrl);
+         myPokemonlist.push({name:item.name});
+         myPokemonlist.push({height:item.height});
+         myPokemonlist.push({imageUrl:item.imageUrl}),
+         myPokemonlist.push(item.types);
        }).catch(function (e) {
          console.error(e);
        });
@@ -147,73 +166,31 @@
        showModal()
      })
    }
+
      function showModal(){
        let modalContainer = document.getElementById("exampleModalCenterHide");
-  
-       modalContainer.id = "exampleModalCenterShow"
-     
-     //----------------------------------------------------------------------------ClOSE BUTTON
-       let closeButtonElement = document.getElementById("closeButton");;
-     
-      closeButtonElement.addEventListener("click", function(){
-          console.log("Closed")
-  
-          modalContainer.id = "exampleModalCenterHide"
-           
-      })
+         modalContainer.id = "exampleModalCenterShow"   
      }
-   
-   
-     
-   
    })();
    
    //------------------------------------------------------------------POKEMON LIST (STORES LIST OF POKEMON HERE)
-   
    let pokemonData = pokemonRepository.getAll()
-   
+   let myPokemonlist = [{
+     name:'',
+     imageUrl:'',
+     height:'',
+     types:''
+   }]
    //-------------------------------------------------------------------------------FOR LOOP
    
    pokemonData.forEach(function (pokemon) {
    pokemonRepository.addListItem(pokemon)
    });
-   
-   
-   
-   
+
    //--------------------------------------------------------------------------------FUNCTION CALLS
    pokemonRepository.loadList().then(function() {
      // Now the data is loaded!
      pokemonRepository.getAll().forEach(function(pokemon){
        pokemonRepository.addListItem(pokemon);
-    
      });
-   
-   
    });
-   
-   
-   //---------------------------------------------------------------------------------------------WINDOW EVENTS FOR DETAILS BOX
-   
-    //  window.addEventListener('keydown', (e) =>{
-    //    let modalContainer = document.getElementById("is-visible")
-    //    if (e.key === "Escape"){
-    //      console.log("Working")
-    //      modalContainer.id = "modal-container"
-    //      console.log(modalContainer)
-    //    }
-    //  })
-   
-     //-----------------------------------------------------------------------------------WINDOW CLICK
-   
-   
-  //    let buttons = document.querySelector('button')
-  //  buttons.addEventListener('click', () =>{
-  //      let modalContainer = document.getElementById("exampleModalCenter")
-       
-  //        console.log("Working")
-  //        modalContainer.className = "exampleModalCenterShow"
-  //        console.log(modalContainer)
-       
-  //    })
- 
