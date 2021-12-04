@@ -1,3 +1,4 @@
+
   //-------------------------------------------POKEMON APP------------------------------------------------------------------
   //========================================================================================================================
   
@@ -5,7 +6,8 @@
   //-------------------------------------------------------------------------Set Default View for Modal Box
   function setdefault(){
     let modalHide= document.getElementById('exampleModalCenter')
-    modalHide.style.opacity = ".001"
+    modalHide.style.opacity = '.001'
+    modalHide.style.zIndex = '-1'
     
   }
   setdefault()
@@ -30,7 +32,7 @@
         return pokemonList.push(pokemon),
         myPokemonlist.push(pokemon);
           } else {
-               console.log("Please use objects to input new pokemon")
+               console.log('Please use objects to input new pokemon')
             }
        }
 
@@ -41,15 +43,15 @@
       
     //---------------------------------------------------------------ADD
    function addListItem(pokemon){
-     let ulElement = document.querySelector(".pokemon-list");
+     let ulElement = document.querySelector('.pokemon-list');
      let listItem = document.createElement("li");
-     let buttons = document.createElement("button");
+     let buttons = document.createElement('button');
      let modal = document.getElementById('exampleModalCenter')
-     let named = document.getElementById("named");
-     let height = document.getElementById("height");
+     let named = document.getElementById('named');
+     let height = document.getElementById('height');
      buttons.classList.add(pokemon.name)
      buttons.innerText = pokemon.name;
-     let pic = document.getElementById("pic")
+     let pic = document.getElementById('pic')
      listItem.appendChild(buttons)
      ulElement.append(listItem)
 
@@ -64,15 +66,15 @@ let search = document.getElementById('search')
         showDetails(pokemon)
         named.innerText = `Name: ${pokemon.name}`;
         named.style.fontWeight = 'bold'
-        named.style.color = "red"
+        named.style.color = 'red'
         height.innerText = `Height: ${pokemon.height}`
         height.style.fontWeight = 'bold'
         pic.src = pokemon.imageUrl
-        pic.style.width = "175px"
-        pic.style.height = "175px"
+        pic.style.width = '175px'
+        pic.style.height = '175px'
         pic.style.position = "absolute"
-        pic.style.left = "50px"
-         modal.style.opacity = "1.5"   
+        pic.style.left = '50px'
+         modal.style.opacity = '1.5'   
           });
         }else{
           console.log('failed')
@@ -90,18 +92,18 @@ let search = document.getElementById('search')
          height.innerText = `Height: ${pokemon.height}`
          height.style.fontWeight = 'bold'
          pic.src = pokemon.imageUrl
-         pic.style.width = "175px"
-         pic.style.height = "175px"
-         pic.style.position = "absolute"
-         pic.style.left = "50px"
-          modal.style.opacity = "1.5"   
+         pic.style.width = '175px'
+         pic.style.height = '175px'
+         pic.style.position = 'absolute'
+         pic.style.left = '50px'
+          modal.style.opacity = '1.5'   
            });
        })
    //---------------------------------------------------------------SHOW POKEMON
        function showDetails(pokemon){
-         let modal = document.getElementById("exampleModalCenter");
-         let modalValue = document.getElementById("exampleModalCenter");
-         let button = document.getElementById("close");
+         let modal = document.getElementById('exampleModalCenter');
+         let modalValue = document.getElementById('exampleModalCenter');
+         let button = document.getElementById('close');
          let ModalBody = document.getElementById('modal-body')
          let pic = document.getElementById('pic')
          console.log(pokemon.name)
@@ -162,14 +164,14 @@ let search = document.getElementById('search')
      }
    //-------------------------------------------------------------------------SHOW MODAL
      function modalClick(){
-     document.querySelector('button').addEventListener("click",() =>{
+     document.querySelector('button').addEventListener('click',() =>{
        showModal()
      })
    }
 
      function showModal(){
-       let modalContainer = document.getElementById("exampleModalCenterHide");
-         modalContainer.id = "exampleModalCenterShow"   
+       let modalContainer = document.getElementById('exampleModalCenterHide');
+         modalContainer.id = 'exampleModalCenterShow'
      }
    })();
    
