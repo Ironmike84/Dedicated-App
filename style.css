@@ -1,4 +1,8 @@
 body{
+          text-shadow: 1px 1px 2px black,
+                      2px 3px 4px black,
+                      3px 3px 3px black;
+               
     font-family: 'Roboto Mono', monospace;
     background-image: url("DiamonPlate.jpg");
     background-size: contain;
@@ -18,7 +22,9 @@ body{
                 3px 3px 4px rgba(2, 2, 2, .7),
                 4px 4px 6px rgba(2, 2, 2, .8);
 }
-.navbar-toggler{
+/* .navbar-toggler{
+    text-shadow: 1px 1px 2px black,
+                  2px 3px 4px black;
     position:static;
     margin-left: auto;
     margin-bottom: auto;
@@ -42,7 +48,7 @@ body{
                  inset 2px 2px 3px rgba(0, 0, 0, 0.5),
                 inset 3px 3px 5px rgba(2, 2, 2, 0.3);
 }
-
+ */
 .navbarSupportedContent{
     text-align: center;
     border: 1px inset rgb(15, 15, 15);
@@ -77,7 +83,6 @@ body{
 }
 
 .pokemonButtons{
-    
     background-image: url("DarkMetal.webp");
     background-size: contain;
     margin-left: 50px;
@@ -88,26 +93,38 @@ body{
     box-shadow: 1px 1px 2px rgb(170, 0, 0),
                 2px 2px 3px rgb(104, 1, 1),
                 4px 4px 8px rgba(163, 0, 0, 0.329);
-                transition: 3s;
+                transition: 1s ease-in-out;
 }
 
 .pokemonButtons:hover{
-    box-shadow: 1px 1px 2px rgb(170, 0, 0),
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0),
+    1px 1px 2px rgb(170, 0, 0),
                 2px 2px 3px rgb(104, 1, 1),
+                2px 2px 4px rgb(0, 0, 0),
                 4px 4px 8px rgba(163, 0, 0, 0.329),
                 5px 5px 8px rgba(0, 136, 11, 0.729),
                 6px 6px 10px rgba(14, 124, 0, 0.729),
                 -1px -1px 2px rgba(170, 0, 0, 0.4),
                 -2px -2px 3px rgba(170, 0, 0, 0.4),
                 -4px -4px 8px rgba(40, 170, 0,.4);
+              
+                
                 
 }
 
 .pokemon-list{
     list-style-type: circle;
 }
+li:hover{
+color: red;;
+    list-style: square;
+    transition: 1s ease-in-out;
+
+}
 
 button{
+  
     margin-top: 7px;
     margin-bottom: 7px;
     color:chartreuse;
@@ -121,12 +138,14 @@ button{
     box-shadow: 1px 1px 2px rgb(0, 0, 0),
     2px 2px 3px rgb(0, 0, 0),
     4px 4px 8px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 2px rgb(143, 8, 8),
+    2px 3px 4px rgb(134, 5, 5);
     transition: 1s ease-in-out;
 }
 button:hover{
     box-shadow: 1px 1px 2px rgb(170, 0, 0),
-    2px 2px 3px rgb(134, 2, 2),
-    4px 4px 8px rgba(163, 0, 0, 0.9);
+                2px 2px 3px rgb(134, 2, 2),
+                4px 4px 8px rgba(163, 0, 0, 0.9);
 }
 
 button:focus{
@@ -137,9 +156,9 @@ button:focus{
     inset 1px 1px 2px rgba(0, 0, 0, 0.74),
     inset 2px 2px 3px rgba(0, 0, 0, 0.64),
     inset 4px 4px 6px rgba(0, 0, 0, 0.34),
-    1px 1px 2px rgba(0, 95, 8, 0.5),
-    2px 2px 3px rgba(0, 95, 8, 0.5),
-    4px 4px 8px rgba(0, 95, 8, 0.5);
+          1px 1px 2px rgba(0, 95, 8, 0.5),
+          2px 2px 3px rgba(0, 95, 8, 0.5),
+          4px 4px 8px rgba(0, 95, 8, 0.5);
 }
 
 #exampleModalCenter{
@@ -151,9 +170,18 @@ button:focus{
     width: 500px ;
     border-radius: 15px;
    box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
-    2px 2px 3px rgba(15, 15, 15, 0.74),
-    4px 4px 6px rgba(0, 0, 0, 0.74);
+               2px 2px 3px rgba(15, 15, 15, 0.74),
+               4px 4px 6px rgba(0, 0, 0, 0.74);
     transition: 1s ease-in-out;
+    z-index: 100;
+}
+
+.navbar-brand{
+color:rgb(94, 139, 21);
+}
+
+#search{
+    margin-left: 5px;
 }
 
 #searchItem{
@@ -174,8 +202,8 @@ button:focus{
     width: 300px;
     border: 1px solid rgb(7, 6, 6);
     box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
-    2px 2px 3px rgba(15, 15, 15, 0.74),
-    4px 4px 6px rgba(0, 0, 0, 0.74);  
+                2px 2px 3px rgba(15, 15, 15, 0.74),
+                4px 4px 6px rgba(0, 0, 0, 0.74);  
 }
 
 .hide{
@@ -183,6 +211,8 @@ button:focus{
 } 
 /* ----------------------------------------------------------------------------------------------------MODAL */
  .modal-header{
+    color: chartreuse;
+    background: linear-gradient(#585454, #000000);
     font-weight: bold;
     width: 100%;
     border-top-right-radius: 15px;
@@ -197,8 +227,15 @@ button:focus{
 
 
 .modal-body{
-background-color: rgba(36, 34, 34, 0.54);
+    background: radial-gradient(#630000a1, #080808);
     height: 250px;
+    box-shadow: inset 1px 1px 2px rgba(10, 10, 10, 0.993),
+                inset 2px 2px 3px rgba(10, 10, 10, 0.993),
+                inset 3px 3px 6px rgba(10, 10, 10, 0.993),
+
+                inset -1px -1px 2px rgba(10, 10, 10, 0.993),
+                inset -2px -2px 3px rgba(10, 10, 10, 0.993),
+                inset -3px -3px 6px rgba(10, 10, 10, 0.993);
 } 
 #named{
 color: red;
@@ -207,17 +244,20 @@ color: red;
 color: red;
 } */ */
 #pic{
-    position: absolute;
+    position:fixed;
     top: 120px;
-    left: 100px
 }
 
 .modal-footer{
+        background: linear-gradient(#585454, #000000);
         padding: 0px;
         position: inherit;
         border-top: 1px inset rgba(173, 168, 168, 0.74);
-        border-bottom: none;
+        border-bottom: 1px solid black;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
         height: 50px;
+
         box-shadow: -1px -1px 2px rgba(22, 21, 21, 0.74),
                     -2px -2px 3px rgba(22, 21, 21, 0.74),
                     -4px -4px 8px rgba(22, 21, 21, 0.74);
@@ -360,7 +400,7 @@ color: red;
     
 
 
- @media screen and (max-width: 500px) {
+ @media screen and (max-width: 1015px) {
 
     body{
         background-size: cover;
@@ -378,34 +418,43 @@ color: red;
     #exampleModalCenter{
         display: block;
         position: fixed;
-        top:75px;
+        top:45px;
         left: 30px;
         height:fit-content;
         width: 450px;
-        height: fit-content;
+        height: 350px;
         border-radius: 15px;
        box-shadow: 1px 1px 2px rgba(8, 8, 8, 0.74),
         2px 2px 3px rgba(15, 15, 15, 0.74),
         4px 4px 6px rgba(0, 0, 0, 0.74);
         transition: 1s ease-in-out;
+        overflow: hidden;
     }
 
     .modal-body{
+       
         background-color: rgba(36, 34, 34, 0.54);
-            height: 200px;
+            height: 170px;
         } 
+
+    #pic{
+        position:absolute;
+        top: 10px;
+       margin-left: 150px;
+   
+    }
     
     .pokemonButtons{
         text-align: center;
         position: fixed;
-        top: 400px;
+        top: 420px;
         left: 70px;
 
         background-image: url("DarkMetal.webp");
         background-size: contain;     
         border: 3px outset rgb(14, 12, 12);
         border-radius: 15px;
-        height: 200px;
+        height: 180px;
         width: 300px;
         box-shadow: 1px 1px 2px rgb(170, 0, 0),
                     2px 2px 3px rgb(104, 1, 1),
